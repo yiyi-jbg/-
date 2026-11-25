@@ -1,0 +1,13 @@
+services:
+  orchard:
+    build: .
+    image: smart-orchard:latest
+    ports:
+      - "8000:8000"
+    environment:
+      # 生产环境务必设置接口密钥
+      ORCHARD_API_KEY: ${ORCHARD_API_KEY:-}
+      ORCHARD_WORKERS: ${ORCHARD_WORKERS:-2}
+    volumes:
+      - ./data:/data
+    restart: unless-stopped

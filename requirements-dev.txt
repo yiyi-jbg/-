@@ -1,0 +1,8 @@
+# 开发与测试依赖
+-r requirements.txt
+pytest>=8.0
+httpx>=0.27
+ruff>=0.6
+# 可选：自训练 ONNX 模型推理（及其测试）
+onnxruntime>=1.17
+onnx>=1.15
